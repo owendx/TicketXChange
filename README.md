@@ -42,7 +42,7 @@ Users can view all the tickets that they have for sale, and can also view all th
 Users can view, delete, and update their tickets.
 
 ### Getting Started
-[The latest version of the slot machine game can be accessed and played here: https://ticketexchange-star-black.herokuapp.com/ ](https://ticketexchange-star-black.herokuapp.com/)
+[The latest version of TicketXChange can be accessed and used here: https://ticketexchange-star-black.herokuapp.com/ ](https://ticketexchange-star-black.herokuapp.com/)
 
 
 ### Roadmap and Planned Features
