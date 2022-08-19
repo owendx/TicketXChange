@@ -51,3 +51,4 @@ There are several features planned to be implemented to the slot machine in the 
 * Users can create a new festival by clicking the 'Add Festival' button. This will take the user to a page where they can fill out the details of the festival. (schema already created for this)
 * Direct message functionality between users
 * Payment functionality
+* Image upload functionality 
