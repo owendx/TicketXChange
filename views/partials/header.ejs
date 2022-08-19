@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>TicketXChange</title>
+</head>
+<body>
+<nav>
+<!--    <img src="/images/camera.svg">-->
+
+    <% if (user) { %>
+
+        <a href="/tickets">VIEW TICKETS</a>
+
+        <a href="/tickets/new"	>
+            ADD TICKET</a>
+
+
+        <a href="/profile"	>
+            PROFILE</a>
+<!--        <a href="/movies/new" >ADD MOVIE</a>-->
+
+
+
+        <a href="/logout">LOG OUT</a>
+
+        <a id="welcome">Hello, <%= user.email %></a>
+    <% } else { %>
+        <a class="login">TicketXChange</a>
+
+
+
+
+    <% } %>
+
+</nav>
+<main>
+    <div class="container">
+

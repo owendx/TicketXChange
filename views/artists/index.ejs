@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<table id="list">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Available</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% artists.forEach(function(artist) { %>
+        <tr>
+            <td><%= artist.name %></td>
+            <td><%= artist.artistBio %></td>
+            <td><%= artist.genres %></td>
+            <td><%= artist.festival %></td>
+            <td><a href="/festivals/<%= artist._id %>">DETAILS</a></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>

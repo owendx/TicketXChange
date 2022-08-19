@@ -1,0 +1,79 @@
+<%- include('../partials/header') %>
+
+<section class="show-card">
+    <div class="ticketCard">
+
+        <div>
+            <div class="cardField">Festival: <%= ticket.festival %></div>
+        </div>
+
+        <div>
+            <div class="cardField">Price: $<%= ticket.price %></div>
+        </div>
+
+
+        <div>
+            <div class="cardField">Listed By: <%= sellerName %></div>
+        </div>
+
+        <div>
+            <div class="cardField">Listed On: <%= timeDiff %></div>
+        </div>
+
+        <div>
+            <div class="cardField">Updated On: <%= updatedTimeDiff %></div>
+        </div>
+
+
+        <% if (isOwnTicket) { %>
+
+            <% if (!ticket.paid) { %>
+                <form id="updatePriceForm" action="/tickets/<%= ticket.id %>?_method=PUT" method="POST">
+                    <!--retrieve the value of the div with id="ticketPrice" and put it in the value of the input with name="price"-->
+                    <input id="inputPrice" type="number" name="price"  value="<%= ticket.price %>">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input id="updateTicket" type="submit" value="Update Ticket Price">
+                </form>
+            <% } else { %>
+
+            <% } %>
+
+            <div class="lowerTicketButtons">
+                <form action="/tickets/<%= ticket.id %>?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input id="deleteTicket" type="submit" value="Delete Ticket">
+                </form>
+
+                <% if (!ticket.paid) { %>
+
+                <form id="markAsSold" action="/tickets/<%= ticket.id %>?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="paid" value="true">
+                    <input id="markAsSoldButton" type="submit" value="Mark As Sold">
+                </form>
+                <% } else { %>
+                <h1 class="soldIndicator">SOLD!</h1>
+                <% } %>
+            </div>
+        <% } else { %>
+            <% if (ticket.paid) { %>
+                <td><h1 class="soldIndicator">SOLD!</h1></td>
+            <% } else { %>
+                <td><h1 class="availableIndicator">AVAILABLE</h1></td>
+            <% } %>
+        <% } %>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<%- include('../partials/footer') %>

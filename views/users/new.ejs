@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/users" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Bio:</label>
+    <input type="text" name="bio">
+    <label>Favorite Artist:</label>
+    <input type="text" name="favoriteArtist">
+    <input type="submit" value="Update Profile">
+</form>
+
+<%- include('../partials/footer') %>

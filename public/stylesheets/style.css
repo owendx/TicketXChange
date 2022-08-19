@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Aldrich', sans-serif;
+
+}
+
+
+
+:root{
+  --primary-color: rgb(248, 210, 83);
+  --secondary-color: rgb(84, 186, 78);
+  --tertiary-color: rgb(248, 249, 204);
+}
+
+.brand-logo {
+  margin-left: 15px;
+}
+
+body {
+  background: var(--tertiary-color);
+}
+
+.card .card-content .card-title {
+  margin-bottom: 10px;
+}
+
+#search-row form {
+  padding-top: 20px;
+}
+
+.student-name {
+  position: relative;
+  top: -5px;
+}
+
+.collection-item form {
+  margin-top: -5px;
+}
+
+
+nav {
+  background: black;
+  height: 50px;
+  display: flex;
+/*  center all the content within the div and align it in the middle */
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav > a {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a#welcome {
+  font-size: 17px;
+
+
+}
+
+table#list {
+  margin-top: 30px;
+  padding: 20px 25px;
+  width: 85%;
+  background-color: var(--primary-color);
+  box-shadow: -15px 15px 0 -1px black;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+
+
+}
+
+ tr {
+  border-bottom: 1px solid black;
+
+}
+
+
+
+ .content-table {
+   border-collapse: collapse;
+   margin: 25px 0;
+   /*font-size: 0.95em;*/
+ }
+
+ thead > tr {
+   font-weight: bold;
+
+ }
+
+ thead {
+   height: 55px;
+ /*  center all the tr elements in thead in the middle align vertically*/
+
+ }
+
+ .content-table th, .content-table td {
+   padding: 11px;
+ }
+
+
+
+
+
+
+
+table#list tbody tr:nth-of-type(even) {
+  background-color: rgb(246, 197, 34);
+}
+
+th {
+  font-size: 20px;
+  text-align: center;
+}
+
+tr {
+  height: 25px;
+
+}
+
+td {
+  text-align: center;
+}
+
+
+
+
+
+.container {
+  /*background-color: var(--tertiary-color);*/
+  display: flex;
+/*  center all contents in the container and align them to center */
+    justify-content: center;
+    align-items: center;
+}
+
+.show-card {
+  width: 100%;
+  display: flex;
+   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+   gap: 3em;
+  padding: 3%;
+  /* justify-content: center; */
+   align-items: center;
+  justify-content: space-around; }
+
+
+.ticketCard{
+  /*padding: 0 75px;*/
+  width: 500px;
+  height: 250px;
+  background-color: var(--primary-color);
+  margin-left: 5px;
+  margin-right: 5px;
+  gap: 4px;
+
+  border: 2px solid black;
+  box-shadow: -15px 15px 0 -1px black;
+  /*padding: 1.4em 6.5em;*/
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+/*  align this div right in the center of its parent grid container*/
+    justify-content: center;
+
+}
+
+.addTicketContainer{
+  /*padding: 0 75px;*/
+  width: 500px;
+  /*height: 250px;*/
+  background-color: var(--primary-color);
+  margin-left: 5px;
+  margin-right: 5px;
+
+  border: 2px solid black;
+  box-shadow: -15px 15px 0 -1px black;
+  padding: 1.4em 6.5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  /*  align this div right in the center of its parent grid container*/
+  justify-content: center;
+
+}
+
+.ticketCard > div {
+  padding-top: 5px;
+
+}
+
+.cardField {
+  font-size: 17px;
+}
+
+
+input#updateTicket, input#addListingButton {
+  background-color: var(--secondary-color);
+  padding:5px 15px;
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: -7px 7px 0 -4px black;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  left: 0;
+  bottom: 0;
+}
+
+input#deleteTicket {
+  background-color: red;
+  padding:5px 15px;
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: -7px 7px 0 -4px black;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  left: 0;
+  bottom: 0;
+}
+
+input#markAsSoldButton {
+  color: white;
+  background-color: #B44EBA;
+  padding:5px 15px;
+
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: -7px 7px 0 -4px black;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  left: 0;
+  bottom: 0;
+}
+
+.soldIndicator {
+  color: white;
+  background-color: var(--secondary-color);
+  padding:5px 15px;
+  padding-top: 8px;
+
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  left: 0;
+  bottom: 0;
+
+}
+
+.availableIndicator {
+  color: white;
+  background-color: red;
+  padding:5px 15px;
+  padding-top: 8px;
+
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  left: 0;
+  bottom: 0;
+
+  font-size: 15px;
+
+}
+
+#inputPrice {
+  border: 3px solid black;
+  height: 30px;
+  padding-left: 5px;
+  position: relative;
+  top: 1.5px;
+
+}
+
+form#updatePriceForm {
+  padding: 10px 0;
+}
+
+input#updateTicket {
+  margin-left: 15px;
+}
+
+#updateTicket, #deleteTicket, #markAsSoldButton {
+  font-size: 17px;
+  position: relative;
+}
+
+#updateTicket:hover, #deleteTicket:hover, #signInButton:hover, #markAsSoldButton:hover, input#addListingButton:hover {
+  box-shadow: -3px 3px 0 -3px;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  /* translate on hover */
+  right: 2px;
+  bottom: -2px;
+  /* animate the movement to position left and bottom */
+}
+
+.title-about {
+  width: 16em;
+  height: 100%;
+  background-color: var(--primary-color);
+  margin-top: 3em;
+  /* margin-bottom: 3em; */
+  border: 2px solid black;
+  position: relative;
+  left: -1em
+}
+
+.title-about::after {
+  content: "";
+  width: 15.7em;
+  height: 100%;
+  background-color: var(--primary-color);
+  border: 2px solid black;
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+  z-index: -1;
+}
+
+.title-about::before {
+  content: "";
+  width: 15.7em;
+  height: 100%;
+  background-color: var(--primary-color);
+  border: 2px solid black;
+  position: absolute;
+  top: 0.8em;
+  left: 0.8em;
+  z-index: -2;
+}
+
+
+.title-about p {
+  font-size: 1.5em;
+  padding-top: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title-about {
+  padding: 1em;
+}
+
+#signInButton {
+  font-size: 17px;
+  position: relative;
+  background-color: var(--secondary-color);
+  padding:5px 15px;
+  /*background:#ccc;*/
+  border: 3px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: -7px 7px 0 -4px black;
+  transition: box-shadow 500ms ease-out, left 500ms ease-out, bottom 500ms ease-out;
+  left: 0;
+  bottom: 0;
+  margin-top: 10px;
+
+/*  align the button in the center of its container*/
+
+}
+
+#signInContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-star {
+  position: relative;
+  top: -35px;
+  left: -50px;
+  z-index: -4;
+  animation: star-rotate 4s infinite;
+}
+
+.first-star {
+  position: relative;
+  top: -350px;
+  left: 100px;
+  z-index: -4;
+  animation: star-rotate 4s infinite;
+}
+
+@keyframes star-rotate {
+  0% {
+    transform: rotate(0turn);
+  }
+  50%{
+    transform: rotate(1turn);
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}
+
+.lowerTicketButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.formField {
+  padding: 5px;
+  height: 100%;
+
+}
+
+td > .soldIndicator {
+  font-size: 20px;
+
+}

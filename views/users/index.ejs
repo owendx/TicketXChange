@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<table id="list">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Available</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% profiles.forEach(function(profile) { %>
+        <tr>
+            <td><%= profile.name %></td>
+            <td><a href="/profiles/<%= profile._id %>">DETAILS</a></td>
+            <td><%= profile.currentStatus %></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>

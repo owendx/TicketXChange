@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<table class="content-table" id="list">
+    <thead>
+    <tr>
+        <th>Festival</th>
+        <th>Price</th>
+        <th>View</th>
+        <th>Status</th>
+        <th>Posted By</th>
+        <th>Seller Email</th>
+        <th>Posted</th>
+        <th>Updated</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <% tickets.forEach(function(ticket) { %>
+        <% let userInfo = ticket.postedBy %>
+        <tr>
+            <td><%= ticket.festival %></td>
+            <td>$<%= ticket.price %></td>
+            <td><a href="/tickets/<%= ticket._id %>">DETAILS</a></td>
+            <% if (ticket.paid) { %>
+                <td><h1 class="soldIndicator">SOLD!</h1></td>
+            <% } else { %>
+                <td><h1 class="availableIndicator">AVAILABLE</h1></td>
+            <% } %>
+
+            <% let sellerProfile = ticket.sellerProfile %>
+            <td><a href="/profile/<%= sellerProfile._id %>"><%= sellerProfile.name %></td>
+
+            <td><%= userInfo.email %></td>
+            <td><%= ticket.createdAtFormatted %> ago</td>
+            <td><%= ticket.updatedAtFormatted %> ago</td>
+
+<!--            <td><%= ticket.paidAt %></td>-->
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>

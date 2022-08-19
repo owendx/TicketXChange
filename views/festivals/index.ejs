@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<table id="list">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Available</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% festivals.forEach(function(festival) { %>
+        <tr>
+            <td><%= festival.festivalName %></td>
+            <td><%= festival.festivalDate %></td>
+            <td><a href="/festivals/<%= festival._id %>">DETAILS</a></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+<%- include('../partials/footer') %>

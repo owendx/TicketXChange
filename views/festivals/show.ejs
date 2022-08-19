@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+
+    <div><%= festival.festivalImage %></div>
+    <div>Name: </div>
+    <div><%= festival.festivalName %></div>
+    <div>Date: </div>
+    <div><%= festival.festivalDate %></div>
+    <div>Location: </div>
+    <div><%= festival.festivalLocation %></div>
+    <div>Description: </div>
+    <div><%= festival.festivalDescription %></div>
+    <div>Lineup:</div>
+    <ul>
+        <%- festival.festivalArtists.map(artist =>
+                `<li>${artist.name} <small>${artist.genres}</small></li>`
+        ).join('') %>
+    </ul>
+
+    <!-- <ul>
+	  <% festival.festivalArtists.forEach(artist => { %>
+	   <li><%= artist.name %> <small><%= artist.genres %> </small> </li>
+	  <% }) %>
+  </ul> -->
+</section>
+
+<%- include('../partials/footer') %>

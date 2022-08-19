@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/artists" method="POST">
+    <label>Artist Name:</label>
+    <input type="text" name="name">
+
+    <label>Bio:</label>
+    <input type="text" name="artistBio">
+
+    <label>Genres:</label>
+    <select name="genres">
+        <option value="Dubstep">Dubstep</option>
+        <option value="House">House</option>
+        <option value="Trance">Trance</option>
+        <option value="Techno">Techno</option>
+        <option value="Hardstyle">Hardstyle</option>
+    </select>
+
+    <label>Website:</label>
+    <input type="text" name="website">
+
+    <label>Festival:</label>
+    <select name="festival">
+        <option value="Coachella">Coachella</option>
+        <option value="Bonnaroo">Bonnaroo</option>
+        <option value="Lollapalooza">Lollapalooza</option>
+        <option value="EDC Vegas">EDC Vegas</option>
+        <option value="Ultra Miami">Ultra Miami</option>
+        <option value="Ultra Miami">Rolling Loud Miami</option>
+    </select>
+
+    <input type="submit" value="Add Artist">
+</form>
+
+<%- include('../partials/footer') %>

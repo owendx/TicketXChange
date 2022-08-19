@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section class="show-card">
+    <div class="addTicketContainer">
+        <form id="new-form" action="/tickets" method="POST">
+            <div class="formField">
+                <label>Festival:</label>
+                <select name="festival">
+                    <option value="Coachella">Coachella</option>
+                    <option value="Bonnaroo">Bonnaroo</option>
+                    <option value="Lollapalooza">Lollapalooza</option>
+                    <option value="EDC Vegas">EDC Vegas</option>
+                    <option value="Ultra Miami">Ultra Miami</option>
+                    <option value="Rolling Loud">Rolling Loud Miami</option>
+                    <option value="Tomorrowland">Pitchfork</option>
+                </select>
+            </div>
+            <div class="formField">
+                <label>Price:</label>
+                <input type="number" name="price">
+            </div>
+            <input id="addListingButton" type="submit" value="Add Listing">
+        </form>
+    </div>
+
+</section>
+
+<%- include('../partials/footer') %>

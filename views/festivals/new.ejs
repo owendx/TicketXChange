@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/festivals" method="POST">
+    <label>Festival Name</label>
+    <input type="text" name="festivalName">
+
+    <label>Description</label>
+    <input type="text" name="festivalDescription">
+
+    <label>Date</label>
+    <input type="date" name="festivalDate">
+
+    <label>Location</label>
+    <input type="text" name="festivalLocation">
+
+    <label>Image</label>
+    <input type="text" name="festivalImage">
+
+    <input type="submit" value="Add Festival">
+</form>
+
+<%- include('../partials/footer') %>

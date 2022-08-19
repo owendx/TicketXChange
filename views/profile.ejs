@@ -1,0 +1,72 @@
+<%- include('./partials/header') %>
+
+
+<section class="show-card">
+  <div class="ticketCard">
+
+    <div>
+      <div class="cardField"> Name: <%= profile.name %></div>
+    </div>
+
+    <div>
+      <div class="cardField"> Status: <%= profile.currentStatus %></div>
+    </div>
+
+    <% if (!profile.user.email) {%>
+    <div>
+      <div class="cardField"> Email: <%= user.email %></div>
+    </div>
+    <% } else{%>
+      <div class="cardField">Email: <%= profile.user.email %></div>
+      <% }%>
+
+    <div>
+      <div class="cardField"> Joined: <%= profile.createdAtFormatted %></div>
+    </div>
+
+  </div>
+
+
+
+
+  <table class="content-table" id="list">
+
+    <thead>
+    <tr>
+      <th>Festival</th>
+      <th>Price</th>
+      <th>View</th>
+      <th>Status</th>
+      <th>Posted On</th>
+      <th>Updated On</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <% tickets.forEach(function(ticket) { %>
+      <% let userInfo = ticket.postedBy %>
+      <tr>
+        <td><%= ticket.festival %></td>
+        <td>$<%= ticket.price %></td>
+        <td><a href="/tickets/<%= ticket._id %>">DETAILS</a></td>
+
+        <% if (ticket.paid) { %>
+          <td><h1 class="soldIndicator">SOLD!</h1></td>
+        <% } else { %>
+          <td><h1 class="availableIndicator">AVAILABLE</h1></td>
+        <% } %>
+
+        <td><%= ticket.createdAt %></td>
+        <td><%= ticket.updatedAt %></td>
+      </tr>
+    <% }); %>
+    </tbody>
+  </table>
+
+
+</section>
+
+
+<%- include('./partials/footer') %>
