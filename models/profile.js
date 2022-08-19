@@ -10,7 +10,6 @@ const profileSchema = new mongoose.Schema({
     updatedAt: {type: Date, default: Date.now},
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     tickets: [{type: mongoose.Schema.Types.ObjectId, ref: 'Ticket'}],
-    // reviews: [{type: mongoose.Schema.Types.ObjectId, ref: 'Review'}],
     lastLogin: {type: Date, default: Date.now},
     currentStatus: {type: String, default: 'offline'},
     currentMessage: {type: String, default: ''},

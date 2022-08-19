@@ -95,15 +95,8 @@ function show(req, res) {
                                     .exec(function(err, user) {
                                         if (err) {}
                                         else {
-                                            // set a variable 'isOwnTicket' to true if the ID of the user who's logged in
-                                            // matches the ticket.postedBy value
-                                            // console.log('the ticket seller ID number is ' + ticket.postedBy);
-                                            // console.log('the user ID number is ' + user._id);
-                                            // console.log(typeof ticket.postedBy);
-                                            // console.log(typeof user._id);
                                             let isOwnTicket = ticket.postedBy.equals(user._id);
                                             sellerName = profile.name;
-                                            // console.log('the seller name is ' + sellerName);
                                             // use the formatDistance function to calculate the distance between the current time and the time of the ticket listing
                                             let timeDiff = formatDistance(new Date(), ticket.createdAt);
                                             // use the formatDistance function to calculate the distance between the current time and the time of the updatedAt field of the ticket listing
@@ -116,8 +109,6 @@ function show(req, res) {
                         }
                     });
 
-                // res.render the tickets/show page, passing in the ticket and sellerName variables
-                // res.render('tickets/show', { ticket });
             }
         });
 }
@@ -131,16 +122,12 @@ function index(req, res) {
                 if (err) {
                     // res.redirect('/festivals');
                 } else {
-                    // console.log('the POPULATED tickets are ' + tickets);
-                    // console.log(tickets);
                     // retrieve all the profiles in the profile collection
                     Profile.find({})
                         .exec(function(err, profiles) {
                             if (err) {
                                 console.log('error finding profiles');
                             } else {
-                                // console.log('the users are ' + users);
-                                // console.log('the users are ' + profiles);
                                 // convert the tickets.createdAt value to a more readable format using formatDistance
                                 tickets.forEach(function(ticket) {
                                     ticket.createdAtFormatted = formatDistance(new Date(), ticket.createdAt);
@@ -149,7 +136,6 @@ function index(req, res) {
                                 tickets.forEach(function(ticket) {
                                     ticket.updatedAtFormatted = formatDistance(new Date(), ticket.updatedAt);
                                 });
-
                                 res.render('tickets/index', { tickets, profiles });
                             }
                         });

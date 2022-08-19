@@ -2,7 +2,6 @@ const Festival = require('../models/festival');
 const Artist = require('../models/artist');
 const Ticket = require('../models/ticket');
 const User = require('../models/user');
-// const Review = require('../models/review');
 const Profile = require('../models/profile');
 const formatDistance = require('date-fns/formatDistance');
 const format = require('date-fns/format');
@@ -117,22 +116,3 @@ function show(req, res) {
         });
 
 }
-
-
-
-
-
-// // function that returns the profile page of a user with the given id
-// function show(req, res) {
-//     // find the profile model with the given id
-//     Profile.findById(req.params.id, function (err, profile) {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             // render the profile page with the profile model
-//             res.render('profile', {profile: profile});
-//         }
-//     });
-// }
-
-
