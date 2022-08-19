@@ -8,10 +8,8 @@ Powered by Node.js, Express, MongoDB, HTML, and CSS
 
 - TicketXChange Description
 - Screenshots
-- Symbol List
 - Technologies Used
 - Getting Started
-- Slot Machine Description
 - Roadmap and Planned Features
 - Wireframe
 - Game Flow
