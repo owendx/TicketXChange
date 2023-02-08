@@ -2,7 +2,7 @@
 **Author: Oluwaseun Talabi**
 
 An online ticket exchange platform that allows users to buy and sell tickets.
-Powered by Node.js, Express, MongoDB, Google OAUTH2, HTML, and CSS
+Powered by SQL, JavaScript, Node.js, Express, Google OAUTH2, HTML, and CSS
 
 ### Contents
 
@@ -24,6 +24,8 @@ Avid festival goers often have a hard time finding tickets to go to their favori
 
 
 ### Technologies Used
+- JavaScript
+- HTML/CSS
 - Node.js
 - Express
 - Google OAUTH2 
